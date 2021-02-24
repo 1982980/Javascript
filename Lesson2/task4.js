@@ -1,10 +1,9 @@
 "use strict";
 
-function getWelcomeMessage() {
-  let firstName = prompt("First name?", "Parvez");
-  let lastName = prompt("Last name?", "Ansari");
-  let fullName = firstName + " " + lastName;
-  return fullName;
+function getWelcomeMessage () {
+  const firstName = prompt("First name?", "Parvez");
+  const lastName = prompt("Last name?", "Ansari");
+  return `${firstName} ${lastName}`;
 }
 
 function reverseString(str) {
@@ -16,5 +15,8 @@ function reverseString(str) {
   return console.log (newWord);
   // return str.split("").reverse().join("");
 }
+const welcomeMessage = getWelcomeMessage();
+// reverseString(welcomeMessage);
 
-reverseString(getWelcomeMessage());
+const reversedString = reverseString(message);
+console.log(reversedString, "outside of function");

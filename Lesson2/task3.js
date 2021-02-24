@@ -1,13 +1,14 @@
 "use strict";
-function getWelcomeMessage() {
-  let firstName = prompt("First name?", "Parvez");
-  let lastName = prompt("Last name?", "Ansari");
-  let fullName = firstName + " " + lastName;
-  return fullName;
+function getWelcomeMessage () {
+  const firstName = prompt("First name?", "Parvez");
+  const lastName = prompt("Last name?", "Ansari");
+  return `${firstName} ${lastName}`;
 }
 
-function getLength(str) {
-  return alert (str.length);
-}
+// const getLength = function (str) {
+//   return alert (str.length);
+// }
 
-getLength(getWelcomeMessage());
+const welcomeMessage = getWelcomeMessage();
+console.log(welcomeMessage.length); // альтернативный вариант
+// getLength(welcomeMessage);

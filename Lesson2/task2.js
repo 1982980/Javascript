@@ -1,13 +1,13 @@
 "use strict";
 
-function checkPassword () {
-  let password = prompt ("Password?");
-  let passwordConfirm = prompt("Confirm password?");
+const checkPassword = function () {
+  const password = prompt ("Password?");
+  const passwordConfirm = prompt("Confirm password?");
   if (password === passwordConfirm) {
-    return alert("Password validated")
-  } else {
-    return alert("Password don't match")
-  };
+   return alert("Password validated")
+  }
+  return alert("Password don't match")
+
 };
 
 checkPassword();
