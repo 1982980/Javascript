@@ -1,5 +1,3 @@
-"use strict";
-
 const checkPassword = function () {
   const password = prompt ("Password?");
   const passwordConfirm = prompt("Confirm password?");
