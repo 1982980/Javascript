@@ -8,6 +8,19 @@ if (n < 0)
 return array.slice(0, n);
 };
 
+const first =  function(array, n) {
+  if(!array) {
+    return;
+  }
+  if (!n) {
+    return array[0];
+  }
+  if (n < 0) {
+    return [];
+  }
+  return array.slice(0, n);
+};
+
 
 console.log(first([7, 9, 0, -2]));
 console.log(first([], 3));
