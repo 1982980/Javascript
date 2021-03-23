@@ -1,14 +1,8 @@
-let array = [1, 3, 3, 5];
+let array = [-1, 3, 3, 5];
 
-// const checkIsNull = function (array) {
-//   for (let value of array) {
-//     if (value <= 0) {
-//       return false;
-//     }
-//   }
-//   return true;
-// };
+const checkIsNull = function (array) {
+  return array.every((elem) => elem > 0);
+};
 
-// console.log(checkIsNull(array));
-
-console.log(array.every((elem) => elem > 0));
+const result = checkIsNull(array);
+console.log(result);
