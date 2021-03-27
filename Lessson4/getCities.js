@@ -54,18 +54,26 @@ const allCities = [
 ];
 // The first variant
 // const getCitiesPopulation9e5 = function (arr) {
+//   const fillteredArray = [];
 //   for (let obj of arr) {
 //     if (obj.population >= 9e5) {
-//       console.log(obj.name);
+//       fillteredArray.push(obj);
 //     }
 //   }
+//   return fillteredArray;
 // };
-
-// getCitiesPopulation9e5(allCities);
+//
+// const result = getCitiesPopulation9e5(allCities);
+// console.log(result);
 
 //The second variant
-allCities.map((arr) => {
-  if (arr.population >= 9e5) {
-    return console.log(arr.name);
-  }
-});
+const getCities = allCities.filter(elem => elem.population >= 9e5)
+console.log(getCities);
+
+// const lessPopulation = allCities.map((item) => {
+//   item.population = item.population / 2;
+//   return item;
+// });
+//
+// console.log(lessPopulation);
+// console.log(allCities);
