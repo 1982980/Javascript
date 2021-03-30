@@ -52,7 +52,8 @@ const allCities = [
   { name: "Longlou", population: 1787909 },
   { name: "Ketian", population: 732402 },
 ];
-// The first variant
+// TODO The first variant
+
 // const getCitiesPopulation9e5 = function (arr) {
 //   const fillteredArray = [];
 //   for (let obj of arr) {
@@ -66,14 +67,18 @@ const allCities = [
 // const result = getCitiesPopulation9e5(allCities);
 // console.log(result);
 
-//The second variant
-const getCities = allCities.filter(elem => elem.population >= 9e5)
-console.log(getCities);
+//TODO The second variant
 
-// const lessPopulation = allCities.map((item) => {
-//   item.population = item.population / 2;
-//   return item;
+// const getCities = allCities.filter((elem) => elem.population >= 9e5);
+// console.log(getCities);
+
+//TODO third variant. All cities less than 9e5 divide by 2
+
+// const lessCities = allCities.map((item) => {
+//   const citys = { ...item };
+//   if (citys.population >= 9e5) {
+//     citys.population = citys.population / 2;
+//   }
+//   return citys;
 // });
-//
-// console.log(lessPopulation);
-// console.log(allCities);
+// console.log(lessCities);
