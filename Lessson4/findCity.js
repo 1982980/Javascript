@@ -52,13 +52,19 @@ const allCities = [
   { name: "Longlou", population: 1787909 },
   { name: "Ketian", population: 732402 },
 ];
+//TODO solution with loop
 
-const findCity = function (arr, nameCity) {
-  for (let obj of arr) {
-    if (obj.name === nameCity) {
-      console.log(`${obj.name} population = ${obj.population}`);
-    }
-  }
-};
+// const findCity = function (arr, nameCity) {
+//   for (let obj of arr) {
+//     if (obj.name === nameCity) {
+//       console.log(`${obj.name} population = ${obj.population}`);
+//     }
+//   }
+// };
+//
+// findCity(allCities, "Ketian");
 
-findCity(allCities, "Ketian");
+//todo solution with array method find
+
+const findCity = allCities.find((elem) => elem.name === "Libas");
+console.log(findCity);
