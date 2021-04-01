@@ -53,12 +53,22 @@ const allCities = [
   { name: "Ketian", population: 732402 },
 ];
 
-const getSumPopulation = function (arr) {
-  let sumPopulation = 0;
-  for (let obj of arr) {
-    sumPopulation += obj.population;
-  }
-  return console.log(sumPopulation);
-};
+//TODO made it use loop FOR
 
-getSumPopulation(allCities);
+// const getSumPopulation = function (arr) {
+//   let sumPopulation = 0;
+//   for (let obj of arr) {
+//     sumPopulation += obj.population;
+//   }
+//   return console.log(sumPopulation);
+// };
+//
+// getSumPopulation(allCities);
+
+//TODO made it array method
+
+const getSumPopulation = allCities.reduce(
+  (accumulator, allCities) => accumulator + allCities.population,
+  0
+);
+console.log(getSumPopulation);
