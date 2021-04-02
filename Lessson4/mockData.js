@@ -400,3 +400,30 @@ const mockData = [
     married: true,
   },
 ];
+
+// const methodEvery = mockData.every((elem) => elem.animals != "");
+// console.log(methodEvery);
+
+// const methodSome = mockData.some((elem) => elem.first_name === "Sandy");
+// console.log(methodSome);
+
+// const methodFilter = mockData.filter((elem) => elem.married === false);
+// console.log(methodFilter);
+
+//TODO I can't understand what is wrong. Maybe problem is in objects inside array
+// const methodIndexOf = mockData.indexOf("Sandy");
+// console.log(methodIndexOf);
+
+// const methodFind = mockData.find((elem) => elem.first_name === "Sandy");
+// console.log(methodFind);
+
+// const methodFindIndex = mockData.findIndex(
+//   (elem) => elem.first_name === "Sandy"
+// );
+// console.log(methodFindIndex);
+
+// const methodMap = mockData.map((elem) => elem.animals + "American woodcock");
+// console.log(methodMap);
+
+// const methodForEach = mockData.forEach((elem) => console.log(elem.id + 100));
+// console.log(methodForEach);
