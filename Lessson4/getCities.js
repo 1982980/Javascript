@@ -74,11 +74,11 @@ const allCities = [
 
 //TODO third variant. All cities less than 9e5 divide by 2
 
-// const lessCities = allCities.map((item) => {
-//   const citys = { ...item };
-//   if (citys.population >= 9e5) {
-//     citys.population = citys.population / 2;
-//   }
-//   return citys;
-// });
-// console.log(lessCities);
+const lessCities = allCities.map((item) => {
+  const citys = { ...item };
+  if (citys.population >= 9e5) {
+    citys.population = citys.population / 2;
+  }
+  return citys;
+});
+console.log(lessCities);
