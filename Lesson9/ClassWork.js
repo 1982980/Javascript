@@ -401,11 +401,67 @@ const array = [
   },
 ];
 
-const obj = array[1];
-const checkYearBirth = function () {
-  let date = new Date(this.birthday);
-  let dateYear = date.getFullYear();
-  return dateYear < 2014;
+const checkInfant = function (obj) {
+  let date = new Date(obj.birthday);
+  return date.getFullYear() > 2019;
 };
-obj.isAdalt = checkYearBirth;
-console.log(obj.isAdalt());
+// console.log(checkInfant(array[49]));
+let everyInfant = array.every(checkInfant);
+// console.log(everyInfant);
+
+let someInfant = array.some(checkInfant);
+// console.log(someInfant);
+
+let findIndexInfant = array.findIndex((element) => {
+  let date = new Date(element.birthday);
+  return date.getFullYear() > 2020;
+});
+// console.log(findIndexInfant);
+
+let findEmail = array.find(
+  (element) => element.email === "sstoyle16@cornell.edu"
+);
+// console.log(findEmail);
+
+let filterSmallerInfant = array.filter((elem) => {
+  let date = new Date(elem.birthday);
+  return date.getFullYear() > 2019;
+});
+// console.log(filterSmallerInfant);
+
+let addPets = array.forEach((elem) => {
+  !checkInfant(array) ? (elem.havePet = true) : (elem.havePet = false);
+});
+// console.log(addPets);
+// console.log(array);
+//что-то не получилось
+
+let mapPets = array.map((element) => element.gender === "Polygender");
+// console.log(mapPets);
+// console.log(mapPets.findIndex((elem) => elem === true));
+
+// let reducer;
+// reducer = array.reduce((res, current) => {
+//   return res + current.id;
+// });
+// console.log(reducer);
+
+let flatArr = array.flat();
+// console.log(array.flat(0));
+
+let flatMapArr = array.flatMap((elem) =>
+  elem.id === 50 ? (elem.newArr = [1, 2, 3, 4, 5]) : (elem.newArr = [3])
+);
+// console.log(flatMapArr);
+const arr = [1, 2, 3].concat([4, 5, 6]);
+const newArr = flatMapArr.concat(arr);
+console.log(newArr);
+//нашел возможность применить reduse()
+let reduser = newArr.reduce((res, current) => res + current);
+// console.log(reduser);
+const newArr2 = [...newArr];
+// console.log(newArr2);
+// console.log(newArr2.slice(-2, -1));
+// console.log(newArr2.splice(-1, 1, 9));
+// console.log(newArr2.reverse());
+console.log(newArr2.join(":"));
